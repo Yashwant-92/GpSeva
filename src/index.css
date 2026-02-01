@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --govt-green: #138808;
+  --govt-orange: #FF6B35;
+  --govt-saffron: #FF9933;
+  --govt-blue: #000080;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #138808;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0d5c06;
+}
+
+/* Custom focus styles */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--govt-orange);
+  outline-offset: 2px;
+}
+
+/* Gradient backgrounds */
+.gradient-hero {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #fff7ed 100%);
+}
+
+.gradient-green {
+  background: linear-gradient(135deg, #138808 0%, #16a34a 100%);
+}
+
+.gradient-orange {
+  background: linear-gradient(135deg, #FF9933 0%, #FF6B35 100%);
+}
+
+/* Service card hover effect */
+.service-card {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(19, 136, 8, 0.15);
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-3 rounded-lg font-medium 
+         hover:from-green-700 hover:to-green-800 transition-all duration-300 
+         shadow-lg hover:shadow-xl active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-white text-green-700 border-2 border-green-600 px-6 py-3 rounded-lg font-medium 
+         hover:bg-green-50 transition-all duration-300 
+         shadow-md hover:shadow-lg active:scale-95;
+}
+
+.btn-orange {
+  @apply bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-lg font-medium 
+         hover:from-orange-600 hover:to-orange-700 transition-all duration-300 
+         shadow-lg hover:shadow-xl active:scale-95;
+}
+
+/* Input styles */
+.input-field {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 
+         focus:border-green-500 transition-all duration-200 outline-none;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300;
+}
+
+/* Sidebar active state */
+.sidebar-active {
+  @apply bg-green-100 text-green-700 border-r-4 border-green-600;
+}
+
+/* Stats card animation */
+.stats-card {
+  @apply transform transition-all duration-300 hover:scale-105;
+}
+
+/* Table styles */
+.table-header {
+  @apply bg-gray-50 text-gray-600 text-sm font-semibold uppercase tracking-wide;
+}
+
+.table-row {
+  @apply border-b border-gray-100 hover:bg-gray-50 transition-colors duration-200;
+}
+
+/* Status badges */
+.badge {
+  @apply px-3 py-1 rounded-full text-xs font-medium;
+}
+
+.badge-pending {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-approved {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge-rejected {
+  @apply bg-red-100 text-red-800;
+}
+
+.badge-processing {
+  @apply bg-blue-100 text-blue-800;
+}
+
+/* Marathi text styling */
+.marathi-text {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Top bar stripe */
+.india-stripe {
+  background: linear-gradient(90deg, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 66%);
+  height: 4px;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  @apply fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center;
+}
+
+/* Form section styling */
+.form-section {
+  @apply bg-white rounded-xl p-6 shadow-md border border-gray-100;
+}
+
+.form-section-title {
+  @apply flex items-center gap-3 text-xl font-semibold text-gray-800 mb-6;
+}
+
+.form-section-number {
+  @apply w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center text-sm font-bold;
+}
